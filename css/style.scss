@@ -1,0 +1,43 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: bisque;
+    font-family: Tahoma, sans-serif;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    margin: 25px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: gray 1px 1px 10px 3px;
+    form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+        width: auto;
+        align-items: center;
+        input , textarea {
+            margin: 10px;
+            width: 400px;
+            padding: 10px;
+        }
+        .submit {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid green;
+            background-color: greenyellow;
+            margin: 10px;
+            width: 200px;
+        }
+    }
+}
