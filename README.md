@@ -5,6 +5,7 @@ Jogo do estilo TextAdventure usando a linguagem Java neste modulo mais voltado a
 - SCSS // pouco usado
 - JAVA
 - MySQL
+- Json
 - Nosso textAdventure tem como historia um preparação de um atleta para a prova de 400 metros rasos, conforme as escolhas do jogador vai interferir no seu resultado final
 
   
