@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: bisque;
+  background-color: beige;
   font-family: Tahoma, sans-serif;
 }
 
@@ -20,25 +20,29 @@ h2 {
   box-shadow: gray 1px 1px 10px 3px;
 }
 .container form {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   margin: 10px;
   width: auto;
-  align-items: center;
 }
-.container form input, .container form textarea {
+.container form input {
   margin: 10px;
   width: 400px;
+  border-radius: 15px;
   padding: 10px;
+  border: 1px solid white;
 }
 .container form .submit {
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid green;
+  border: 2px solid green;
+  cursor: pointer;
   background-color: greenyellow;
   margin: 10px;
   width: 200px;
+}
+.container form .submit:hover {
+  background-color: green;
+  transition: 500ms;
 }
 
 /*# sourceMappingURL=style.css.map */
