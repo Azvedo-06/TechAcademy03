@@ -8,6 +8,7 @@ public class Item {
     private String comandoCorreto;
     private Cena cenaAtual;
     private Cena cenaDestino;
+    private String descricao;
 
     public Item() {
     }
@@ -67,4 +68,8 @@ public class Item {
     public void setCenaDestino(Cena cenaDestino) {
         this.cenaDestino = cenaDestino;
     }
+
+    public String getDescricao() {return descricao;}
+
+    public void setDescricao(String descricao) {this.descricao = descricao;}
 }
