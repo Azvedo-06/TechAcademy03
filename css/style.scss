@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: bisque;
+    background-color: beige;
     font-family: Tahoma, sans-serif;
 
 }
@@ -20,24 +20,28 @@ h2 {
     border-radius: 10px;
     box-shadow: gray 1px 1px 10px 3px;
     form {
-        display: flex;
-        flex-direction: column;
         text-align: center;
         margin: 10px;
         width: auto;
-        align-items: center;
-        input , textarea {
+        input {
             margin: 10px;
             width: 400px;
+            border-radius: 15px;
             padding: 10px;
+            border: 1px solid white;
         }
         .submit {
             padding: 5px;
             border-radius: 5px;
-            border: 1px solid green;
+            border: 2px solid green;
+            cursor: pointer;
             background-color: greenyellow;
             margin: 10px;
             width: 200px;
+            &:hover {
+                background-color: green;
+                transition: 500ms;
+            }
         }
     }
 }
