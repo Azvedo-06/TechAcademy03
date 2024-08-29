@@ -1,4 +1,5 @@
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Cena;
@@ -15,8 +16,10 @@ public class Main {
             Cena cena = CenaDAO.findCenaById(1);
             System.out.println(cena.toString());
 
-            List<Item> itens  = ItemDAO.findItemByScena(cena);
-            System.out.println("Itens: " + itens);
+            for ( Item item : ItemDAO.findItemByScena(cena)) {
+                System.out.println("itens: " + item.getNome());
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
