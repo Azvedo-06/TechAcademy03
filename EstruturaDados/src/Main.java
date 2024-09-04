@@ -4,8 +4,10 @@ import java.util.List;
 import com.google.gson.Gson;
 import model.Cena;
 import model.Item;
+import model.Save;
 import repository.CenaDAO;
 import repository.ItemDAO;
+import repository.SavaDAO;
 import spark.Spark;
 
 public class Main {
@@ -20,6 +22,11 @@ public class Main {
             Cena cena = CenaDAO.findCenaById(2);
             List<Item> item = ItemDAO.findItemByScena(cena);
 
+
+            Save save = SavaDAO.novoJogo();
+            String saveJson = GSON.toJson(save);
+
+
            List<String> cenaEitens = new ArrayList<>();
            String cenaJson;
            String itemJson;
@@ -28,6 +35,9 @@ public class Main {
 
            Spark.get("/", (req, res) -> cenaEitens);
 
+           ;
+           System.out.println("-----save-do-jogo-----");
+           System.out.println(save.getCenaAtual().getDescricao());
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
