@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
 
        try {
-            Cena cena = CenaDAO.findCenaById(2);
+            Cena cena = CenaDAO.findCenaById(1);
             List<Item> item = ItemDAO.findItemByScena(cena);
 
 

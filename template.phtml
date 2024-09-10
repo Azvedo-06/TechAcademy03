@@ -10,11 +10,20 @@
     <h2>Text Adventure</h2>
 
     <div class="container">
+        <div class="box-console">
+            
+            <?php foreach($arrayGame as $mensagem): ?>
+             
+            <?php endforeach ?>
+
+        <?= print_r($mensagem)?>
+        </div>
         <form>
             <label for="nome">Digite o comando:</label>
-            <input type="text" required>
+            <input type="text" name="save" value="<?= $arrayGame ?>">
             <button type="submit" class="submit">Enviar</button>
         </form>
-    </div>
+
+    </div> 
 </body>
-</html>
+</html>            
