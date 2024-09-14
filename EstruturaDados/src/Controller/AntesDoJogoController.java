@@ -9,6 +9,11 @@ import spark.Route;
 public class AntesDoJogoController implements Route {
 
 
+    private final Gson gson;
+    public AntesDoJogoController(Gson gson) {
+        this.gson = gson;
+    }
+
     @Override
     public Object handle(Request request, Response response) throws Exception {
         String comandoBruto = request.params(":comando");

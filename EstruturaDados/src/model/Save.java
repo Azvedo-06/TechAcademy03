@@ -1,8 +1,12 @@
 package model;
 
+
+
 public class Save {
     private Integer idSave;
     private Cena cenaAtual;
+
+
 
     public Integer getIdSave() {
         return idSave;
@@ -19,6 +23,7 @@ public class Save {
     public void setCenaAtual(Cena cenaAtual) {
         this.cenaAtual = cenaAtual;
     }
+
 
     @Override
     public String toString() {

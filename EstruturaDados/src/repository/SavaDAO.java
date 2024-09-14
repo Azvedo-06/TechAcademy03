@@ -1,6 +1,5 @@
 package repository;
 import java.sql.*;
-
 import model.Save;
 
 public class SavaDAO {
@@ -13,7 +12,7 @@ public class SavaDAO {
         ResultSet generatedKeys = stmt.getGeneratedKeys();
 
         Save save = new Save();
-
+        ItemDAO itemDAO = new ItemDAO();
         if (generatedKeys.next()) {
             save.setIdSave(generatedKeys.getInt(1));
             save.setCenaAtual(CenaDAO.findCenaById(1));

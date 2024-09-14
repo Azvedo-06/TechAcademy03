@@ -6,8 +6,8 @@ public class Item {
     private String descricaoPositiva;
     private String descricaoNegativa;
     private String comandoCorreto;
-    private Cena cenaAtual;
-    private Cena cenaDestino;
+    private Integer idcenaAtual;
+    private Integer idcenaDestino;
     private String descricao;
 
     public Item() {
@@ -41,9 +41,7 @@ public class Item {
         return this.descricaoNegativa;
     }
 
-    public void setDescricaoNegativa(String descricaoNegativa) {
-        this.descricaoNegativa = descricaoNegativa;
-    }
+    public void setDescricaoNegativa(String descricaoNegativa) {this.descricaoNegativa = descricaoNegativa;}
 
     public String getComandoCorreto() {
         return this.comandoCorreto;
@@ -53,23 +51,37 @@ public class Item {
         this.comandoCorreto = comandoCorreto;
     }
 
-    public Cena getCenaAtual() {
-        return this.cenaAtual;
+    public Integer getIdcenaAtual() {
+        return idcenaAtual;
     }
 
-    public void setCenaAtual(Cena cenaAtual) {
-        this.cenaAtual = cenaAtual;
+    public void setIdcenaAtual(Integer idcenaAtual) {
+        this.idcenaAtual = idcenaAtual;
     }
 
-    public Cena getCenaDestino() {
-        return this.cenaDestino;
+    public Integer getIdcenaDestino() {
+        return idcenaDestino;
     }
 
-    public void setCenaDestino(Cena cenaDestino) {
-        this.cenaDestino = cenaDestino;
+    public void setIdcenaDestino(Integer idcenaDestino) {
+        this.idcenaDestino = idcenaDestino;
     }
 
     public String getDescricao() {return descricao;}
 
     public void setDescricao(String descricao) {this.descricao = descricao;}
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "idItem=" + idItem +
+                ", nome='" + nome + '\'' +
+                ", descricaoPositiva='" + descricaoPositiva + '\'' +
+                ", descricaoNegativa='" + descricaoNegativa + '\'' +
+                ", comandoCorreto='" + comandoCorreto + '\'' +
+                ", cenaAtual=" + idcenaAtual +
+                ", cenaDestino=" + idcenaDestino +
+                ", descricao='" + descricao + '\'' +
+                '}';
+    }
 }

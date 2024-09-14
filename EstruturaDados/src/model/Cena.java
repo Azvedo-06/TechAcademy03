@@ -5,7 +5,7 @@ import java.util.List;
 public class Cena {
     private Integer id_cena;
     private String descricao;
-    private List<Item> items;
+    private List<Item> itens;
 
     public Cena() {
     }
@@ -28,5 +28,13 @@ public class Cena {
 
     public String toString() {
         return "Cena{id_cena=" + this.id_cena + ", descricao='" + this.descricao + "'}";
+    }
+
+    public List<Item> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<Item> itens) {
+        this.itens = itens;
     }
 }
