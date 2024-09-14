@@ -20,7 +20,6 @@ public class ComandoService {
     }
 
     public Console help() {
-        Console console = new Console();
         console.setMensagem("HELP MENSAGEM");
         return console;
     }
@@ -28,8 +27,8 @@ public class ComandoService {
     public Console start() {
         try {
             Save save = SavaDAO.novoJogo();
-            console.setIdSave(save.getIdSave());
             console.setMensagem(save.getCenaAtual().getDescricao());
+            console.setIdSave(save.getIdSave());
             return console;
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,20 +39,20 @@ public class ComandoService {
     }
 
     public Console getResultConsole() {
-        Console console = new Console();
         try {
-            switch (comando[0].toLowerCase()) {
-                case "help":
-                    return help();
-                case "start":
-                    return start();
 
-                default:
-                    console.setMensagem("Comando Invalido");
-                    return console;
-            }
-        }catch (Exception e) {
-            e.printStackTrace();
+            String primeiroComando = comando[0].toLowerCase();
+
+            return switch (primeiroComando) {
+                case "help" -> help();
+                case "start" -> start();
+                default -> {
+                    console.setMensagem("Comando inválido");
+                    yield console;
+                }
+            };
+        } catch (Exception e) {
+            console.setMensagem("Comando inválido");
             return console;
         }
     }

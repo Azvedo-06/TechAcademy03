@@ -14,8 +14,4 @@ if ($_GET['comando'] && $_GET['save']) {
 
 $arrayAssociativo = json_decode($conteudo);
 
-
-//$_SESSION['historico'] = isset($_SESSION['historico']) ? array_merge($_SESSION['historico'], $arrayAssociativo->messages) : [];
-
-
 include "template.phtml";

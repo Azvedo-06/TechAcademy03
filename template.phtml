@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loyout web</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h2>Text Adventure</h2>
+    <main>
+        <h2>Text Adventure</h2>
 
-    <div class="container">
-        <div class="box-console">
-            <p><?= $arrayAssociativo->mensagem ?></p>
+        <div class="container">
+            <div class="box-console">
+                <p><?= $arrayAssociativo->mensagem ?></p>
+            </div>
+
+            <form>
+                <label for="nome">Digite o comando:</label>
+                <input type="text" name="save" value="<?= $arrayAssociativo->idSave ?>" readonly />
+                <button type="submit" class="submit">Enviar</button>
+            </form>
+
         </div>
-
-        <form>
-            <label for="nome">Digite o comando:</label>
-            <input type="text" name="save" value="<?= $arrayAssociativo ->idSave?>" readonly/>
-            <button type="submit" class="submit">Enviar</button>
-        </form>
-
-    </div> 
+    </main>
 </body>
-</html>            
+
+</html>
