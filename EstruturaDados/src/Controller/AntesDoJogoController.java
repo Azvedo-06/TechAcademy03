@@ -1,25 +1,33 @@
 package Controller;
 
 import com.google.gson.Gson;
-import services.ComandoService;
+import services.ComandoHelp;
+import services.ComandoStart;
 import spark.Request;
 import spark.Response;
 import spark.Route;
 
 public class AntesDoJogoController implements Route {
+    private  static final  Gson gson = new Gson();
 
-
-    private final Gson gson;
     public AntesDoJogoController(Gson gson) {
-        this.gson = gson;
     }
 
     @Override
     public Object handle(Request request, Response response) throws Exception {
         String comandoBruto = request.params(":comando");
+        String[] comandos = comandoBruto.split(" ");
 
-        ComandoService comandoService = new ComandoService(comandoBruto);
-        Gson gson = new Gson();
-        return gson.toJson(comandoService.getResultConsole());
+        if (comandos[0].equalsIgnoreCase("help")) {
+            ComandoHelp comandoHelp = new ComandoHelp();
+            return comandoHelp.executar();
+        }
+
+        if (comandos[0].equalsIgnoreCase("start")) {
+            ComandoStart comandoStart = new ComandoStart();
+            return gson.toJson(comandoStart.executar());
+        }
+
+        return "O comando digitado foi: " + comandos[0] + " e o argumento " + comandos[1];
     }
 }

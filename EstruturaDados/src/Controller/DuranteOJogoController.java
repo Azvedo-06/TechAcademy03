@@ -14,7 +14,7 @@ public class DuranteOJogoController implements Route {
 
     @Override
     public Object handle(Request request, Response response) throws Exception {
-        return "Implementar a Rota";
+        return "implementar rota";
     }
 
 }
