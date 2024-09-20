@@ -28,6 +28,10 @@ public class AntesDoJogoController implements Route {
             return gson.toJson(comandoStart.executar());
         }
 
+        if (comandos[0].equalsIgnoreCase("check")) {
+
+        }
+
         return "O comando digitado foi: " + comandos[0] + " e o argumento " + comandos[1];
     }
 }
