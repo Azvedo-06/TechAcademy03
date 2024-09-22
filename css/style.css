@@ -5,16 +5,19 @@
 
 body {
   background-color: beige;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Lucida Sans', 'verdana';
 }
 
 h2 {
   text-align: center;
+  font-family: 'Lucida Sans', 'verdana';
+  margin-top: 10px;
 }
 
 .container {
   width: auto;
   margin: 25px;
+  padding: 15px;
   background-color: blanchedalmond;
   border-radius: 10px;
   box-shadow: gray 1px 1px 10px 3px;
@@ -22,6 +25,7 @@ h2 {
 .container form {
   text-align: center;
   margin: 10px;
+  margin-top: 10px;
   width: auto;
 }
 .container form input {
@@ -36,6 +40,7 @@ h2 {
   border-radius: 5px;
   border: 2px solid green;
   cursor: pointer;
+  font-family: 'Lucida Sans', 'Verdana';
   background-color: greenyellow;
   margin: 10px;
   width: 200px;

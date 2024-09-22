@@ -1,5 +1,9 @@
 package Controller;
 import com.google.gson.Gson;
+import model.Cena;
+import model.Item;
+import repository.CenaDAO;
+import repository.ItemDAO;
 import services.*;
 import spark.Request;
 import spark.Response;
@@ -21,10 +25,16 @@ public class AntesDoJogoController implements Route {
             ComandoHelp comandoHelp = new ComandoHelp();
             return comandoHelp.executar();
         }
+        // comando de restart
+        if (comandos[0].equalsIgnoreCase("restart")) {
+            ComandoRestart comandoRestart = new ComandoRestart();
+            return comandoRestart.executar();
+        }
+
         //comando para começar o jogo
         if (comandos[0].equalsIgnoreCase("start")) {
             ComandoStart comandoStart = new ComandoStart();
-            return gson.toJson(comandoStart.executar());
+            return comandoStart.executar();
         }
         //comando para sair da primeira cena
         if (comandos[0].equalsIgnoreCase("use") && comandos[1].equalsIgnoreCase("sapatilha")) {
@@ -60,7 +70,6 @@ public class AntesDoJogoController implements Route {
             ComandoFinalTrue comandoFinalTrue = new ComandoFinalTrue();
             return gson.toJson(comandoFinalTrue.executar());
         }
-
 
         return "Comando Desconhecido ou Errado: " + comandoBruto;
     }
