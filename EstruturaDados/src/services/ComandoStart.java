@@ -17,7 +17,7 @@ public class ComandoStart {
         this.listaConsole = new ArrayList<>();
     }
 
-    public String executar() throws SQLException {
+    public String executar() {
      return "Alison sempre foi apaixonado por atletismo. " +
              "Desde pequeno, Depois de anos de treinamento intenso e dedicação, " +
              "ele conseguiu chegar à final dos 400 metros rasos do Campeonato Nacional. " +
