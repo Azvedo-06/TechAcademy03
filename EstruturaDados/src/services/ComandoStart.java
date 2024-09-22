@@ -17,6 +17,15 @@ public class ComandoStart {
         this.listaConsole = new ArrayList<>();
     }
 
+    public String executar() throws SQLException {
+     return "Alison sempre foi apaixonado por atletismo. " +
+             "Desde pequeno, Depois de anos de treinamento intenso e dedicação, " +
+             "ele conseguiu chegar à final dos 400 metros rasos do Campeonato Nacional. " +
+             "Alison está no vestiário preparar-se para a corrida, Vamos checar suas SAPATILHA...";
+    }
+
+
+    /* // o meu mySLQ caiu e eu perdi o banco de dados fiz um novo mais ele não estava mais pegando o save nem o texto de start
     public List<Console> executar() {
         try {
             CenaDAO cena = new CenaDAO();
@@ -32,4 +41,5 @@ public class ComandoStart {
             return listaConsole;
         }
     }
+    */
 }
