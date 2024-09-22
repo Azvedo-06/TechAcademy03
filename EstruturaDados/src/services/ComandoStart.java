@@ -1,9 +1,9 @@
 package services;
-
+import model.Cena;
 import model.Console;
 import model.Save;
+import repository.CenaDAO;
 import repository.SavaDAO;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,7 @@ public class ComandoStart {
 
     public List<Console> executar() {
         try {
+            CenaDAO cena = new CenaDAO();
             Save save = SavaDAO.novoJogo();
             console.setMensagem(save.getCenaAtual().getDescricao());
             console.setIdSave(save.getIdSave());

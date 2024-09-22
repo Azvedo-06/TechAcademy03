@@ -1,7 +1,7 @@
 <?php
-
 use function PHPSTORM_META\type;
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,13 +19,11 @@ use function PHPSTORM_META\type;
         <div class="container">
 
             <div class="box-console">
-                <p><?=  $arrayAssociativo = $conteudo ?></p>
-            
+                <?= $arrayAssociativo = $conteudo; ?>
             </div>
 
             <form>
-
-                <input type="text" name="comando" />
+                <input type="text" name="comando" placeholder="Digite um comando"/>
              
                 <input type="submit" class="submit" />
             </form>

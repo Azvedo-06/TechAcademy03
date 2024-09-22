@@ -28,9 +28,7 @@ public class ItemDAO {
 
             Integer idCenaAtual = resultSet.getInt("id_cena_atual");
 
-
             item.setIdcenaAtual(idCenaAtual);
-
             itens.add(item);
         }
 

@@ -8,20 +8,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComandoUsePregos extends ComandoCheckSapatilha{
+public class ComandoUseDoc {
     private Console console;
     private List<Console> listaConsole;
 
-    public ComandoUsePregos() {
+    public ComandoUseDoc() {
         this.console = new Console();
         this.listaConsole = new ArrayList<>();
     }
 
-    public List<Console> executar() {
+    public List<Console>executar() {
         try {
             CenaDAO cena = new CenaDAO();
             Save save = new Save();
-            console.setMensagem(String.valueOf(CenaDAO.findCenaById(3).getDescricao().formatted()));
+            console.setMensagem(String.valueOf(CenaDAO.findCenaById(4).getDescricao()));
             listaConsole.add(console);
             return listaConsole;
         } catch (SQLException e) {
