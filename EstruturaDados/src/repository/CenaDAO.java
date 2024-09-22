@@ -15,7 +15,7 @@ public class CenaDAO {
 
     public static Cena findCenaById(Integer id) throws SQLException {
         Connection conn = Mysql.getConnection();
-        String sql = "SELECT * FROM cenas WHERE id_cena = ?";
+        String sql = "SELECT * FROM cenas WHERE id_cena = ?;";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1, id);
         ResultSet rs = stmt.executeQuery();

@@ -21,6 +21,7 @@ public class ComandoCheckSapatilha {
             CenaDAO cena = new CenaDAO();
             Save save = new Save();
             console.setMensagem(String.valueOf(CenaDAO.findCenaById(2).getDescricao()));
+            console.setIdSave(save.getIdSave());
             listaConsole.add(console);
             return listaConsole;
         } catch (SQLException e) {

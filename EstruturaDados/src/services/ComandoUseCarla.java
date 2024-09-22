@@ -22,6 +22,7 @@ public class ComandoUseCarla {
             CenaDAO cena = new CenaDAO();
             Save save = new Save();
             console.setMensagem(String.valueOf(CenaDAO.findCenaById(7).getDescricao()));
+
             listaConsole.add(console);
             return listaConsole;
         } catch (SQLException e) {
