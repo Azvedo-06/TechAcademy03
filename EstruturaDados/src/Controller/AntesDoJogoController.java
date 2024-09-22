@@ -56,11 +56,7 @@ public class AntesDoJogoController implements Route {
             return gson.toJson(comandoUseCarla.executar());
         }
         //comando ultima cena final certo
-        if (comandos[0].equalsIgnoreCase("use")
-                && comandos[1].equalsIgnoreCase("bloco")
-                && comandos[2].equalsIgnoreCase("with")
-                && comandos[3].equalsIgnoreCase("carla")) {
-
+        if (comandos[0].equalsIgnoreCase("use") && comandos[1].equalsIgnoreCase("pista")) {
             ComandoFinalTrue comandoFinalTrue = new ComandoFinalTrue();
             return gson.toJson(comandoFinalTrue.executar());
         }
